@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library</title>
+    <link rel="stylesheet" href="123.css">
+</head>
+<body>
+    <header>
+        <h1>Library</h1>
+        <select class="language-switcher" id="languageSwitcher" aria-label="Language Selector">
+            <option value="en">English</option>
+            <option value="ka">ქართული</option>
+        </select>
+    </header>
+
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for a book..." aria-label="Search">
+        <button onclick="searchBooks()" aria-label="Search Button">Search</button>
+    </div>
+
+    <div class="book-list" id="bookList">
+        <div class="book-item" style="--delay: 1;">
+            <h3>წიგნი 1</h3>
+            <p>ავტორი</p>
+        </div>
+        <div class="book-item" style="--delay: 2;">
+            <h3>წიგნი 2</h3>
+            <p>ავტორი</p>
+        </div>
+        <div class="book-item" style="--delay: 3;">
+            <h3>წიგნი 3</h3>
+            <p>ავტორი</p>
+        </div>
+        <div class="book-item" style="--delay: 4;">
+            <h3>წიგნი 4</h3>
+            <p>ავტორი</p>
+        </div>
+    </div>
+
+    <script src="123.js"></script>
+</body>
+</html>
