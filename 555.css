@@ -1,177 +1,166 @@
-* {
-    margin: 2px;
-    padding: 4px;
-    box-sizing: border-box;
-}
-
 body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f4f0;
-    color: #333;
-    display: flex;
-    justify-content: center;
-    height: 100vh;
-    overflow: hidden;
+    margin: 0;
+    font-family: 'Crimson Text', serif;
+    background: url('dark_gothic_texture.jpg') no-repeat center center fixed; /* Background image for a Gothic vibe */
+    background-size: cover;
+    color: #d4c9a1;
 }
 
 .sidebar {
-    background-color: #f0f0ed;
-    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 200px;
+    height: 100%;
+    background-color: rgba(20, 20, 20, 0.95);
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-    animation: fadeInLeft 0.8s ease-out forwards;
+    align-items: center;
+    padding-top: 20px;
+    text-align: center;
 }
 
 .sidebar h1 {
+    font-family: 'Garamond', serif;
+    color: #c6a965;
     font-size: 2.5em;
-    font-weight: 700;
-    color: #333;
-    opacity: 0;
-    animation: fadeInTitle 1s ease-in-out 0.2s forwards;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #c6a965;
+    padding-bottom: 15px;
 }
 
 .main-container {
-    width: 100%;
-    max-width: 1000px;
+    margin-left: 220px;
     padding: 20px;
-    overflow-y: auto;
-    animation: fadeInPage 1s ease-in;
-}
-
-.search-section {
-    text-align: center;
-    margin-bottom: 20px;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
 }
 
 .search-section p {
-    font-size: 1.5em;
-    font-weight: 500;
+    color: #9f8962;
+    font-size: 1.2em;
     margin-bottom: 10px;
-    animation: slideInTitle 1s ease-out;
 }
 
 .search-bar {
     position: relative;
-    display: inline-block;
-    width: 60%;
     max-width: 400px;
-    transition: all 0.3s ease;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
 }
 
 .search-bar input {
     width: 100%;
-    padding: 12px 20px;
-    border-radius: 25px;
-    border: 1px solid #ddd;
-    outline: none;
+    padding: 10px;
+    border: 1px solid #9f8962;
+    border-radius: 4px;
+    background-color: #1f1f1f;
+    color: #d4c9a1;
     font-size: 1em;
-    transition: all 0.3s ease;
-}
-
-.search-bar input:focus {
-    width: 110%;
-    padding: 12px 22px;
-    border: 1px solid #aaa;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    outline: none;
+    font-family: 'Crimson Text', serif;
 }
 
 .search-bar img {
     position: absolute;
-    right: 15px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 20px;
-    cursor: pointer;
-}
-
-.genre-tags {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-bottom: 30px;
+    right: 10px;
+    width: 18px;
+    height: 18px;
+    filter: brightness(0.8);
 }
 
 .genre-tags .tag {
-    background-color: #e6e4df;
-    padding: 8px 15px;
-    border-radius: 20px;
-    font-size: 0.9em;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    background-color: #2e2e2e;
+    color: #b19d7d;
+    border: 1px solid #9f8962;
+    padding: 5px 15px;
+    margin: 5px;
+    display: inline-block;
+    border-radius: 8px;
+    font-family: 'Garamond', serif;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .genre-tags .tag:hover {
-    background-color: #ccc;
+    color: #d4c9a1;
     transform: scale(1.1);
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 0 10px #c6a965;
 }
 
 .section-title {
-    font-size: 1.2em;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #666;
-    opacity: 0;
-    animation: slideInTitle 0.8s ease-out forwards;
+    font-family: 'Crimson Text', serif;
+    font-size: 1.8em;
+    color: #b8a379;
+    margin-top: 20px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #c6a965;
+    padding-bottom: 5px;
 }
 
 .recently-read {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
-    margin-bottom: 40px;
-    overflow-x: auto;
+    margin-top: 20px;
 }
 
 .book {
-    width: 120px;
-    cursor: pointer;
+    width: 150px;
+    background-color: rgba(20, 20, 20, 0.8);
+    color: #d4c9a1;
+    padding: 15px;
     text-align: center;
-    border: 1px solid #ddd;
+    border: 2px solid #9f8962;
     border-radius: 10px;
+    transition: transform 0.4s, box-shadow 0.4s;
+    cursor: pointer;
+    position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    transform: scale(1);
-    animation: fadeInBook 0.5s ease-out forwards;
 }
 
 .book:hover {
-    transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #c6a965;
 }
 
 .book img {
     width: 100%;
     height: auto;
-    display: block;
-}
-
-.book-info {
-    padding: 10px;
-    background-color: #f9f9f9;
-    transform: translateY(10px);
-    opacity: 0;
-    transition: all 0.3s ease;
-}
-
-.book:hover .book-info {
-    transform: translateY(0);
-    opacity: 1;
+    border-bottom: 1px solid #9f8962;
+    margin-bottom: 10px;
 }
 
 .book-info .title {
-    font-size: 1em;
-    font-weight: 500;
-    margin-bottom: 5px;
-    color: #333;
+    font-weight: bold;
+    font-size: 1.1em;
+    font-family: 'Garamond', serif;
 }
 
 .book-info .author {
     font-size: 0.9em;
-    color: #777;
+    font-style: italic;
 }
+
+.reveal {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.hover-effect {
+    box-shadow: 0 0 20px #c6a965;
+}
+
+.recently-read .book {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
 
 @keyframes fadeInLeft {
     from {
@@ -225,6 +214,3 @@ body {
         transform: scale(1);
     }
 }
-
-
-
